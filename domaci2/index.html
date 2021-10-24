@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Domaci2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+    <button type="button" class="btn darker fw-bold  position-absolute top-0 end-0  m-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Dodaj nove filmove
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Dodaj novi film</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="forma" onsubmit="getModalData(); return false">
+                    <div class="form-group">
+                      <label for="inputName">Naziv</label>
+                      <input type="text" class="form-control" id="inputName"  placeholder="....." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputYear">Godina</label>
+                        <input type="number" class="form-control" id="inputYear" min="1973" max="2021" required placeholder="----">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputCountry">Drzava</label>
+                        <input type="text" class="form-control" id="inputCountry"  placeholder=".....">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputNote">Napomena</label>
+                        <input type="text" class="form-control" id="inputNotes"  placeholder=".....">
+                      </div>
+                    <div class="form-group">
+                      <label for="inputActors">Glumci</label>
+                      <input type="text" class="form-control" id="inputActors" placeholder="....." required>
+                      <small  class="form-text text-muted">Glumce unositi tako sto ce dva glumca biti razdvojena zarezom.</small>
+                    </div>
+                   
+                    <button type="submit" class="btn fw-bold darker mt-5">Submit</button>
+                  </form>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+  <div class="container"> 
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-hover mt-5">
+                <thead class="light  table-bordered border-white">
+                    <tr>
+                        <td><h5>Odgledan</h5></td>
+                        <td><h5>Naziv</h5></td>
+                        <td><h5>Godina</h5></td>
+                        <td><h5>Drzava</h5></td>
+                        <td><h5>Napomena</h5></td>
+                        <td><h5>Glumci</h5></td>
+                    
+                    </tr>
+                </thead>
+                <tbody id="filmsTable">
+                    
+                </tbody>
+            </table>  
+        </div>   
+    </div>
+ </div>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+<script src="./app.js"></script>
+</html>

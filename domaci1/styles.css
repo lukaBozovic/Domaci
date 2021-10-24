@@ -1,0 +1,13 @@
+.bord{
+    border: solid;
+    font-weight: bold;
+}
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+.neparni{
+    background-color: #E9ECEF;
+}
